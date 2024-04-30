@@ -58,6 +58,16 @@ void q3(int x){
 
 
 void q4(int x){
+    /*
+    it run to the input number for ex user enter 5 so till 5 row code run
+
+    1
+    2 8
+    3 7 9
+    4 6
+    5 
+    
+    */
  int t=x/2;
  int n1=(x-1)*2;
   for(int i=1;i<=x;i++){
@@ -98,6 +108,19 @@ void q4(int x){
 }
 
 void q5(int t){
+
+/*
+same as Q4 but in this code go till t+(t-1)
+
+input 3
+1
+2 8
+3 7 9
+4 6
+5
+
+*/
+
  int x=t+(t-1);
  int n1=(x-1)*2;
   for(int i=1;i<=x;i++){
@@ -138,6 +161,14 @@ void q5(int t){
 }
 
 void smp1(int x){
+    /*
+    1
+    2 6
+    3 7 10
+    4 8 11 13
+    5 9 12 14 15
+    
+    */
      int y,z=1;
 
     for(int i=1;i<=x;i++){
@@ -165,6 +196,7 @@ scanf("%d",&y);
 // q1(x);
 // q3(x);
 // q4(x);
-q6(x,y);
+smp1(x);
+// q6(x,y);
     return 0;
 }
