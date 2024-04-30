@@ -1,30 +1,28 @@
 #include<stdio.h>
 
-// void q1(int x){
-// int i,j;
-// int z=1;
 
-// for(i=1;i<=x;i++){
+void q1(int x){
+int i,j;
+int z=1;
+for(i=1;i<=x;i++){
+    for(j=1;j<=i;j++){
+        printf("%d ",(z+x+i));
+        z++;
+    }
+    printf("\n");
+    }   
+}
 
-//     for(j=1;j<=i;j++){
 
-//         printf("%d ",(z+x+i));
-//         z++;
-
-//     }
-//     printf("\n");
-// }
-// }
-
-// void q2(int x){
-// int z=1;
-// for(int i=1;i<=x;i++){
-//     for(int j=1;j<=i;j++){
-//         printf("%3d",z++);
-//     }
-//     printf("\n");
-// }
-// }
+void q2(int x){
+int z=1;
+for(int i=1;i<=x;i++){
+    for(int j=1;j<=i;j++){
+        printf("%3d",z++);
+    }
+    printf("\n");
+}
+}
 
 void q3(int x){
     /*
@@ -81,7 +79,6 @@ void q4(int x){
     }
     else
     {
-
             int ln=i;
             for(int j=(x-i)+1;j>=1;j--)
             {
@@ -100,28 +97,74 @@ void q4(int x){
     }
 }
 
-// void smp1(int x){
-//     int y,z=1;
+void q5(int t){
+ int x=t+(t-1);
+ int n1=(x-1)*2;
+  for(int i=1;i<=x;i++){
 
-//     for(int i=1;i<=x;i++){
+    int val=i,pre=1;
+        int f=(x-i)*2;
 
-//         int dif=x-1,val=i;
+    if(i<=t){
+        int ln=i;
+            for(int j=i;j>=1;j--)
+            {
+               ln--;
+               printf("%10d",val);
+               if(pre%2!=0)val+=f;
+               if(pre%2==0)val+=(ln*2);
+               pre++;
+               f-=2;
+            }
+    }
+    else
+    {
+            int ln=i;
+            for(int j=(x-i)+1;j>=1;j--)
+            {
+               ln--;
+               printf("%10d",val);
+               if(pre%2!=0)val+=f;
+               if(pre%2==0)val+=(ln*2);
+               pre++;
+               f-=2;
+            }
+    }
+   
+    n1-=2;
+    f-=2;
+    printf("\n");
+    }
+}
+
+void smp1(int x){
+     int y,z=1;
+
+    for(int i=1;i<=x;i++){
+
+        int dif=x-1,val=i;
         
-//         for(int j=1;j<=i;j++){
+        for(int j=1;j<=i;j++){
 
-//             printf("%3d",val);
-//             val+=dif--;
+            printf("%3d",val);
+            val+=dif--;
 
-//         }
-//     printf("\n");
-// }
-// }
+        }
+    printf("\n");
+}
+}
 
+void q6(int x,int y){
+
+}
 
 int main(){
-int x;
+int x,y;
 scanf("%d",&x);
+scanf("%d",&y);
 // q1(x);
-q3(x);
+// q3(x);
+// q4(x);
+q6(x,y);
     return 0;
 }
